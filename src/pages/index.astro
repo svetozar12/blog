@@ -1,0 +1,39 @@
+---
+import PostLink from "../components/PostLink.astro";
+import Search from "../components/Search.astro";
+import HeadingLayout from "../layouts/HeadingLayout.astro";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<Layout title="Welcome to Astro.">
+  <HeadingLayout>
+    <h2 style="color: hsl(200, 100%, 30%);">Svetozar Gospodinov Blog</h2>
+    <Search />
+  </HeadingLayout>
+  <main>
+    <ul>
+      {
+        allPosts.map((post) => {
+          const postDate = new Date(post.frontmatter.pubDate);
+          const result = postDate.toLocaleString("en-GB", {
+            // you can use undefined as first argument
+            year: "numeric",
+            month: "long",
+            day: "2-digit",
+          });
+
+          return (
+            <PostLink
+              date={result}
+              summary={post.frontmatter.description}
+              tags={post.frontmatter.tags}
+              title={post.frontmatter.title}
+              url={post.url as string}
+            />
+          );
+        })
+      }
+    </ul>
+  </main>
+</Layout>

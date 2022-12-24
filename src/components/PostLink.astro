@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  summary: string;
+  tags: string[];
+  date: string;
+  url: string;
+}
+
+const { date, summary, tags, title, url } = Astro.props;
+---
+
+<div>
+  <a href={url}> <h1>{title}</h1></a>
+  <p>{date}</p>
+  <!-- make tags separate component -->
+  <div class="tagsContainer">{tags.map((tag) => <p class="tag">{tag}</p>)}</div>
+  <p>{summary}</p>
+  <a href={url}>Read more</a>
+</div>
+
+<style>
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    text-decoration: underline hsl(200, 100%, 30%);
+  }
+  .tagsContainer {
+    display: flex;
+  }
+
+  .tag {
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+</style>
