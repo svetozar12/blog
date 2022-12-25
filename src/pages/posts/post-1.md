@@ -1,15 +1,12 @@
 ---
-title: "My First Blog Post"
+title: "My journey while developing this blog"
 pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
-image:
-  url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
-  alt: "The Astro logo with the word One."
+description: "There you can read about the problems i faced with this blog."
+author: "Svetozar Gospodinov"
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# My First Blog Post
+# My journey while developing this blog
 
 Published on: 2022-07-01
 
@@ -17,7 +14,7 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 ## What I've accomplished
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+1. **Installing Astro**: First, I created a new Astro project.
 
 2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
@@ -25,4 +22,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 ## What's next
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+I have to add sorting with tags and fix up the styling
