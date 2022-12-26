@@ -1,0 +1,31 @@
+---
+import Post from "./Post.astro";
+import Search from "./Search.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<div>
+  <Search />
+  <main id="posts">
+    {
+      allPosts.map((post) => {
+        const postDate = new Date(post.frontmatter.pubDate);
+        const result = postDate.toLocaleString("en-GB", {
+          year: "numeric",
+          month: "long",
+          day: "2-digit",
+        });
+        return (
+          <Post
+            date={result}
+            summary={post.frontmatter.description}
+            tags={post.frontmatter.tags}
+            title={post.frontmatter.title}
+            url={post.url as string}
+          />
+        );
+      })
+    }
+  </main>
+</div>

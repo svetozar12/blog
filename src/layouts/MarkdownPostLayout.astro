@@ -1,6 +1,36 @@
 ---
+import Tags from "../components/Tags.astro";
+import Layout from "./Layout.astro";
+import Wrapper from "./Wrapper.astro";
+
 const { frontmatter } = Astro.props;
+const postDate = new Date(frontmatter.pubDate);
+const result = postDate.toLocaleString("en-GB", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+});
 ---
 
-<h1>{frontmatter.title}</h1>
-<slot />
+<Layout title=""
+  ><Wrapper>
+    <header>
+      <a href="/"
+        ><h1 style="color: hsl(200, 100%, 50%); width:55%">
+          Svetozar Gospodinov Blog
+        </h1>
+      </a>
+      <h1>{frontmatter.title}</h1>
+      <p>{result}</p>
+      <Tags tags={frontmatter.tags} />
+    </header>
+    <slot />
+  </Wrapper>
+</Layout>
+
+<style>
+  p {
+    color: #9ca3af;
+    font-size: larger;
+  }
+</style>

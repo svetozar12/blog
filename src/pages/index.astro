@@ -1,10 +1,13 @@
 ---
-import Home from "../components/Home";
+import Home from "../components/Home.astro";
 import Layout from "../layouts/Layout.astro";
-const allPosts = await Astro.glob("../pages/posts/*.md");
 ---
 
 <Layout title="Welcome to Astro.">
-  <h1 style="color: hsl(200, 100%, 50%);">Svetozar Gospodinov Blog</h1>
-  <Home allPosts={allPosts} />
+  <a href="/"
+    ><h1 style="color: hsl(200, 100%, 50%); width:55%">
+      Svetozar Gospodinov Blog
+    </h1>
+  </a>
+  <Home />
 </Layout>

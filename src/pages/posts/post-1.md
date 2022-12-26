@@ -1,14 +1,11 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "My journey while developing this blog"
 pubDate: 2022-07-01
 description: "There you can read about the problems i faced with this blog."
 author: "Svetozar Gospodinov"
 tags: ["astro", "blogging", "learning in public"]
 ---
-
-# My journey while developing this blog
-
-Published on: 2022-07-01
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
