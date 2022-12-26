@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "My journey while developing this blog"
+title: "My journey while developing this blog(updated)"
 pubDate: 2022-07-01
 description: "There you can read about the problems i faced with this blog."
 author: "Svetozar Gospodinov"
