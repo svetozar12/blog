@@ -13,6 +13,7 @@ const { tags } = Astro.props;
 <style>
   .tagsContainer {
     display: flex;
+    flex-wrap: wrap;
   }
   .tag {
     padding: 0.25em 0.5em;
@@ -20,5 +21,6 @@ const { tags } = Astro.props;
     color: var(--blog-white);
     border-radius: var(--blog-border-radius);
     margin-right: 1em;
+    margin-bottom: 1em;
   }
 </style>
