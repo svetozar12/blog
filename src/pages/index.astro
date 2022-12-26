@@ -1,13 +1,14 @@
 ---
 import Home from "../components/Home.astro";
 import Layout from "../layouts/Layout.astro";
+import Wrapper from "../layouts/Wrapper.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <a href="/"
-    ><h1 style="color: hsl(200, 100%, 50%); width:55%">
-      Svetozar Gospodinov Blog
-    </h1>
-  </a>
-  <Home />
+  <Wrapper
+    ><a href="/" style=" width:55%"
+      ><h1 style="color: var(--blog-blue);">Svetozar Gospodinov Blog</h1>
+    </a>
+    <Home />
+  </Wrapper>
 </Layout>

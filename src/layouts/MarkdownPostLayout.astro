@@ -1,25 +1,17 @@
 ---
 import Tags from "../components/Tags.astro";
+import { formatDate } from "../utils/formatDate";
 import Layout from "./Layout.astro";
 import Wrapper from "./Wrapper.astro";
 
 const { frontmatter } = Astro.props;
-const postDate = new Date(frontmatter.pubDate);
-const result = postDate.toLocaleString("en-GB", {
-  year: "numeric",
-  month: "long",
-  day: "2-digit",
-});
+const result = formatDate(frontmatter.pubDate);
 ---
 
-<Layout title=""
+<Layout title={frontmatter.title}
   ><Wrapper>
     <header>
-      <a href="/"
-        ><h1 style="color: hsl(200, 100%, 50%); width:55%">
-          Svetozar Gospodinov Blog
-        </h1>
-      </a>
+      <a href="/"><h1>Svetozar Gospodinov Blog</h1></a>
       <h1>{frontmatter.title}</h1>
       <p>{result}</p>
       <Tags tags={frontmatter.tags} />
@@ -30,7 +22,13 @@ const result = postDate.toLocaleString("en-GB", {
 
 <style>
   p {
-    color: #9ca3af;
+    color: var(--blog-gray);
     font-size: larger;
+  }
+  a {
+    width: 55%;
+  }
+  a > h1 {
+    color: var(--blog-blue);
   }
 </style>
