@@ -24,10 +24,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  line-height: 1.625;
 }
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline var(--blog-blue-100);
+}
+p > img {
+  width: 95%;
+}
+p:has(> img) {
+  text-align: center;
 }

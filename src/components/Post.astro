@@ -21,7 +21,7 @@ const { date, summary, tags, title, url } = Astro.props;
     <Tags tags={tags} />
   </div>
   <p>{summary}</p>
-  <a href={url}>Read more</a>
+  <a style="color: var(--blog-blue)" href={url}>Read more</a>
 </article>
 
 <style>
