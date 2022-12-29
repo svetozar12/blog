@@ -25,6 +25,7 @@ body {
   align-items: center;
   flex-direction: column;
   line-height: 1.625;
+  margin: 0;
 }
 a {
   text-decoration: none;
