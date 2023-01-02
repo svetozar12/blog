@@ -47,3 +47,5 @@ query GetAllCities() {
 ```
 
 so now when we get error our gql server return just the message which we want to display
+
+# Next Part [Graphql Codegen Part 5](/posts/GqlCodegen)

@@ -53,3 +53,5 @@ type City {
     population: Int!;
 }
 ```
+
+# Next Part [Gql Error handling Part 4](/posts/GqlErrorHandling)

@@ -17,3 +17,5 @@ My personal favorite gql library would be [yoga-server](https://the-guild.dev/gr
 - [express-graphql](https://graphql.org/graphql-js/running-an-express-graphql-server/)
 
 For implementation details you can read yoga-server documentation(or the library that you chose)
+
+# Next Part [Gql schema Part 3](/posts/GqlSchema)
