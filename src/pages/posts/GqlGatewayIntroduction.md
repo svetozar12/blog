@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Using Gql as a gateway between your api and consumers
+title: Graphql gateway introduction Part 1
 author: Svetozar Gospodinov
-description: "After researching gql for a while i decided to start writing about my learnings"
+description: "Part 1 of blogs series about gql as gateway"
 pubDate: 2022-12-27
 tags: ["gql", "rest-api", "gateway", "architecture"]
 ---
@@ -19,9 +19,9 @@ We use GQL as a contract between the Frontend and the Backend so we can have mut
 
 ## Issues we would have
 
-- Error handling inside the gql gateway(gql always returns 200 status code post request) which could be tricky to display in our application
-- We have to manage all types for our queries and mutations(which wouldn't be a big problem if you have used typescript before)
-- How would we codegen the stuff we need from out gql schema
-- which library would we use for our gql gateway(there are a lot of choices)
+- which library would we use for our gql gateway(there are a lot of choices) [Part2](/posts/ChoosingGqlLibrary)
+- We have to manage all types for our queries and mutations(which wouldn't be a big problem if you have used typescript before) [Part3](/posts/GqlSchema)
+- Error handling inside the gql gateway(gql always returns 200 status code post request) which could be tricky to display in our application [Part4](/posts/GqlErrorHandling)
+- How would we codegen the stuff we need from out gql schema [Part5](/posts/GqlCodegen)
 
 ![Whimsical example](/images/GQL_GATEWAY_PROS_CONS.png "Whimsical example")
