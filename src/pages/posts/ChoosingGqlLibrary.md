@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Choosing gql gateway library
+title: Choosing gql gateway library Part 2
 author: Svetozar Gospodinov
 description: "Part 2 of blogs series about gql as gateway"
 pubDate: 2023-01-01
