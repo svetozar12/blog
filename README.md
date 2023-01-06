@@ -1,4 +1,4 @@
-Deployed here ==> https://blog-sgospodinov.netlify.app/
+Deployed here ==> http://blog.gospodinovs.com/
 ├── public/
 │ └── favicon.svg
 ├── src/
