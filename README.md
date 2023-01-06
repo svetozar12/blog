@@ -1,14 +1,4 @@
-Deployed here ==> http://blog.gospodinovs.com/
-├── public/
-│ └── favicon.svg
-├── src/
-│ ├── components/
-│ │ └── ...components(reusable ui components)
-│ ├── layouts/
-│ │ └── ...layouts(reusable ui wrappers)
-│ └── pages/
-│ └── ...pages(similar to nextjs or remix routing can store md or mdx files as well)
-└── package.json
+Deployed here ==> https://blog.gospodinovs.com/
 
 | Command         | Action                                      |
 | :-------------- | :------------------------------------------ |
