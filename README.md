@@ -1,5 +1,4 @@
 Deployed here ==> https://blog-sgospodinov.netlify.app/
-/
 ├── public/
 │ └── favicon.svg
 ├── src/

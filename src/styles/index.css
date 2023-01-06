@@ -2,7 +2,8 @@
   --blog-blue: hsl(200, 100%, 50%);
   --blog-blue-100: hsl(200, 100%, 30%);
   --blog-gray: #9ca3af;
-  --blog-gray-100: #3b3b3b;
+  --blog-gray-100: #2f3542;
+  --blog-gray-200: #3b3b3b;
   --blog-white: white;
   --header-font-size: 2.25rem;
   --header-font-weight: 700;
@@ -39,4 +40,18 @@ p > img {
 }
 p:has(> img) {
   text-align: center;
+}
+
+pre > code {
+  border-radius: 4px;
+  background: var(--blog-gray-200);
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: normal;
+  white-space: pre;
+  word-spacing: normal;
+  tab-size: 4;
+  padding: 1rem;
 }

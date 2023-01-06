@@ -11,6 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.7.2"
+    "@astrojs/mdx": "^0.14.0",
+    "astro": "^1.7.2",
+    "remark-toc": "^8.0.1"
   }
 }

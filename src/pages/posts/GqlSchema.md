@@ -7,7 +7,7 @@ pubDate: 2023-01-01
 tags: ["gql", "rest-api", "gateway", "architecture"]
 ---
 
-## Gql schema
+# Gql schema
 
 The core of graphql is its schema. In graphql we have mutations(updating data) and queries(getting data) which are the two core operations, inside of them we have resolvers , which have some logic and return the data which we can query.
 
