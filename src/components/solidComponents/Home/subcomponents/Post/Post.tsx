@@ -21,7 +21,7 @@ const Post: Component<Props> = ({ title, date, summary, tags, url }) => {
         <Tags tags={tags} />
       </div>
       <p>{summary}</p>
-      <a style="color: var(--blog-blue)" href={url}>
+      <a class="readMore" href={url}>
         Read more
       </a>
     </article>

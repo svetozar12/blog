@@ -6,8 +6,12 @@
   color: var(--blog-white);
 }
 a {
-  color: var(--blog-white) !important;
+  color: var(--blog-white);
 }
 p {
   color: var(--blog-gray);
+}
+
+.readMore {
+  color: var(--blog-blue);
 }

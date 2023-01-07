@@ -29,10 +29,11 @@
 }
 
 .tagCount {
+  background-color: var(--blog-gray);
   display: flex;
   padding: 0.25em 0.5em;
-  border: 1px solid var(--blog-white);
-  color: var(--blog-white);
+  border: 1px solid var(--blog-gray);
+  color: var(--blog-dark);
   border-top-right-radius: var(--blog-border-radius);
   border-bottom-right-radius: var(--blog-border-radius);
 }
