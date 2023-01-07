@@ -10,16 +10,15 @@
   --header-font-size: 2.25rem;
   --header-font-weight: 700;
   --blog-border-radius: 5px;
+  --font-size: 1.7rem;
+  --font-weight: 500;
 }
 
 html {
   font-family: system-ui, sans-serif;
   background-color: #161a1d;
 }
-code {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
+
 body {
   color: white;
   width: 100%;
@@ -29,31 +28,4 @@ body {
   flex-direction: column;
   line-height: 1.625;
   margin: 0;
-}
-a {
-  text-decoration: none;
-  color: var(--blog-blue);
-}
-a:hover {
-  text-decoration: underline var(--blog-blue-100);
-}
-p > img {
-  width: 95%;
-}
-p:has(> img) {
-  text-align: center;
-}
-
-pre > code {
-  border-radius: 4px;
-  background: var(--blog-gray-200);
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  display: block;
-  font-size: 14px;
-  line-height: 1.5;
-  word-break: normal;
-  white-space: pre;
-  word-spacing: normal;
-  tab-size: 4;
-  padding: 1rem;
 }

@@ -15,7 +15,7 @@ const Post: Component<Props> = ({ title, date, summary, tags, url }) => {
     <article class="container">
       <div>
         <a href={url}>
-          <h1 class="text">{title}</h1>
+          <h1 class="previewTitle text">{title}</h1>
         </a>
         <p>{date}</p>
         <Tags tags={tags} />

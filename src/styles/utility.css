@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: var(--blog-blue);
+}
+a:hover {
+  text-decoration: underline var(--blog-blue-100);
+}
+p > img {
+  width: 95%;
+}
+p:has(> img) {
+  text-align: center;
+}
+
+pre > code {
+  border-radius: 4px;
+  background: var(--blog-gray-200);
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: normal;
+  white-space: pre;
+  word-spacing: normal;
+  tab-size: 4;
+  padding: 1rem;
+}
+
+.largeText {
+  font-size: large;
+}
+
+.text {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}

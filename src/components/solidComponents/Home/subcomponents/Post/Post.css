@@ -1,7 +1,3 @@
-.text {
-  font-size: var(--header-font-size);
-  font-weight: var(--header-font-weight);
-}
 .container > * {
   color: var(--blog-white);
 }
@@ -14,4 +10,8 @@ p {
 
 .readMore {
   color: var(--blog-blue);
+}
+
+.previewTitle {
+  margin: 0;
 }
