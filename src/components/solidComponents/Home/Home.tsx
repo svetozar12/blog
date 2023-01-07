@@ -1,5 +1,5 @@
 import type { MarkdownInstance } from "astro";
-import type { Component } from "solid-js";
+import { Component, createSignal } from "solid-js";
 import { formatDate } from "../../../utils/formatDate";
 import Post from "./subcomponents/Post";
 import Search from "./subcomponents/Search/Search";
@@ -10,12 +10,13 @@ interface Props {
 }
 
 const Home: Component<Props> = ({ allPosts }) => {
+  const [posts, setPosts] = createSignal<typeof allPosts>(allPosts);
   return (
     <main>
       <Search />
-      <SortTags allPosts={allPosts} />
+      <SortTags allPosts={posts()} setPosts={setPosts} />
       <article id="posts">
-        {allPosts.map(({ frontmatter, url }) => {
+        {posts().map(({ frontmatter, url }) => {
           const result = formatDate(frontmatter.pubDate);
 
           return (

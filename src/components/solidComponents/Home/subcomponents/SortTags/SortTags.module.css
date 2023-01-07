@@ -7,9 +7,15 @@
 .tag {
   cursor: pointer;
   display: flex;
+  margin-bottom: 1em;
+  margin-right: 1em;
 }
 
 .tag:hover .tagName {
+  background-color: var(--blog-blue-100);
+}
+
+.activeTag {
   background-color: var(--blog-blue-100);
 }
 
@@ -20,7 +26,6 @@
   color: var(--blog-white);
   border-top-left-radius: var(--blog-border-radius);
   border-bottom-left-radius: var(--blog-border-radius);
-  margin-bottom: 1em;
 }
 
 .tagCount {
@@ -30,6 +35,4 @@
   color: var(--blog-white);
   border-top-right-radius: var(--blog-border-radius);
   border-bottom-right-radius: var(--blog-border-radius);
-  margin-right: 1em;
-  margin-bottom: 1em;
 }
