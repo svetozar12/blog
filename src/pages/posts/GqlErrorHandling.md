@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Markdown.astro
 title: Graphql Error Handling Part 4
 author: Svetozar Gospodinov
 description: "Part 4 of blogs series about gql as gateway"

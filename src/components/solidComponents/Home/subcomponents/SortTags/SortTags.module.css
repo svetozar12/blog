@@ -1,0 +1,35 @@
+.sortTags {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  cursor: pointer;
+  display: flex;
+}
+
+.tag:hover .tagName {
+  background-color: var(--blog-blue-100);
+}
+
+.tagName {
+  display: flex;
+  padding: 0.25em 0.5em;
+  border: 1px solid var(--blog-white);
+  color: var(--blog-white);
+  border-top-left-radius: var(--blog-border-radius);
+  border-bottom-left-radius: var(--blog-border-radius);
+  margin-bottom: 1em;
+}
+
+.tagCount {
+  display: flex;
+  padding: 0.25em 0.5em;
+  border: 1px solid var(--blog-white);
+  color: var(--blog-white);
+  border-top-right-radius: var(--blog-border-radius);
+  border-bottom-right-radius: var(--blog-border-radius);
+  margin-right: 1em;
+  margin-bottom: 1em;
+}

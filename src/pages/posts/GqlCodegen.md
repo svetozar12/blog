@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Markdown.astro
 title: Graphql Codegen Part 5
 author: Svetozar Gospodinov
 description: "Part 5 of blogs series about gql as gateway"

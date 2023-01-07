@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Markdown.astro
 title: "My journey while developing this blog(updated)"
 pubDate: 2022-07-01
 description: "There you can read about the problems i faced with this blog."

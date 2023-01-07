@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Markdown.astro
 title: Our first gql schema Part 3
 author: Svetozar Gospodinov
 description: "Part 3 of blogs series about gql as gateway"

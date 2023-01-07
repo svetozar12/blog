@@ -1,7 +1,7 @@
 ---
 import Home from "../components/solidComponents/Home/Home";
+import SortTags from "../components/solidComponents/Home/subcomponents/SortTags/SortTags";
 import Layout from "../layouts/Layout.astro";
-import Wrapper from "../layouts/Wrapper.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
@@ -21,10 +21,8 @@ allPosts.sort((a, b) => {
 ---
 
 <Layout title="Welcome to Astro.">
-  <Wrapper
-    ><a href="/" style=" width:55%"
-      ><h1 style="color: var(--blog-blue);">Svetozar Gospodinov Blog</h1>
-    </a>
-    <Home client:only="solid-js" allPosts={allPosts} />
-  </Wrapper>
+  <a href="/" style=" width:55%"
+    ><h1 style="color: var(--blog-blue);">Svetozar Gospodinov Blog</h1>
+  </a>
+  <Home client:only="solid-js" allPosts={allPosts} />
 </Layout>

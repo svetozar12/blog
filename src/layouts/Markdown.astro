@@ -2,22 +2,19 @@
 import Tags from "../components/solidComponents/Tags";
 import { formatDate } from "../utils/formatDate";
 import Layout from "./Layout.astro";
-import Wrapper from "./Wrapper.astro";
 
 const { frontmatter } = Astro.props;
 const result = formatDate(frontmatter.pubDate);
 ---
 
-<Layout title={frontmatter.title}
-  ><Wrapper>
-    <header>
-      <a href="/"><h1>Svetozar Gospodinov Blog</h1></a>
-      <h1>{frontmatter.title}</h1>
-      <p>{result}</p>
-      <Tags client:only="solid-js" tags={frontmatter.tags} />
-    </header>
-    <slot />
-  </Wrapper>
+<Layout title={frontmatter.title}>
+  <header>
+    <a href="/"><h1>Svetozar Gospodinov Blog</h1></a>
+    <h1>{frontmatter.title}</h1>
+    <p>{result}</p>
+    <Tags client:only="solid-js" tags={frontmatter.tags} />
+  </header>
+  <slot />
 </Layout>
 
 <style>

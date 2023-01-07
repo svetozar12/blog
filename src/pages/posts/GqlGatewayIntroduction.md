@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Markdown.astro
 title: Graphql gateway introduction Part 1
 author: Svetozar Gospodinov
 description: "Part 1 of blogs series about gql as gateway"
