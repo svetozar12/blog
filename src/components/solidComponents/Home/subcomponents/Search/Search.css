@@ -1,0 +1,11 @@
+label {
+  color: var(--blog-white);
+}
+#search {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  background-color: var(--blog-gray-200);
+  color: var(--blog-white);
+  border: 1px solid var(--blog-gray);
+  border-radius: var(--blog-border-radius);
+}

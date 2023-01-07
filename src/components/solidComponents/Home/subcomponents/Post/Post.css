@@ -1,0 +1,13 @@
+.text {
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
+}
+.container > * {
+  color: var(--blog-white);
+}
+a {
+  color: var(--blog-white) !important;
+}
+p {
+  color: var(--blog-gray);
+}

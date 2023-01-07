@@ -1,5 +1,5 @@
 ---
-import Tags from "../components/Tags.astro";
+import Tags from "../components/solidComponents/Tags";
 import { formatDate } from "../utils/formatDate";
 import Layout from "./Layout.astro";
 import Wrapper from "./Wrapper.astro";
@@ -14,7 +14,7 @@ const result = formatDate(frontmatter.pubDate);
       <a href="/"><h1>Svetozar Gospodinov Blog</h1></a>
       <h1>{frontmatter.title}</h1>
       <p>{result}</p>
-      <Tags tags={frontmatter.tags} />
+      <Tags client:only="solid-js" tags={frontmatter.tags} />
     </header>
     <slot />
   </Wrapper>
