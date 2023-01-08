@@ -1,6 +1,6 @@
 import type { Component, Setter } from "solid-js";
+import { PAGE_SIZE } from "../../utils";
 import s from "./Pagination.module.css";
-import { PAGE_SIZE } from "../../Home";
 
 interface Props {
   total: number;

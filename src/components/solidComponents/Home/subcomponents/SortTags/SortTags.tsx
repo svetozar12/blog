@@ -1,41 +1,36 @@
 import type { MarkdownInstance } from "astro";
 import s from "./SortTags.module.css";
 import { getTags } from "./utils";
-import { Component, createEffect, createSignal, Setter } from "solid-js";
+import type { Component, Setter } from "solid-js";
 
 interface Props {
+  activeTag: string[];
+  setActiveTag: Setter<string[]>;
   allPosts: MarkdownInstance<Record<string, any>>[];
   setPosts: Setter<MarkdownInstance<Record<string, any>>[]>;
 }
 
 const SortTags: Component<Props> = (props) => {
-  const [activeTag, setActiveTag] = createSignal<string[]>([]);
-  const initialPosts = props.allPosts;
   const handleClick = (key: string) => {
-    if (activeTag().includes(key)) {
-      const index = activeTag().indexOf(key);
+    if (props.activeTag.includes(key)) {
+      const index = props.activeTag.indexOf(key);
       if (index > -1) {
-        activeTag().splice(index, 1);
-        return setActiveTag([...activeTag()]);
+        props.activeTag.splice(index, 1);
+        return props.setActiveTag([...props.activeTag]);
       }
     }
-    setActiveTag([...activeTag(), key]);
+    props.setActiveTag([...props.activeTag, key]);
   };
-  createEffect(() => {
-    if (activeTag().length < 1) return props.setPosts(initialPosts);
 
-    const sortedPosts = props.allPosts.filter((k) =>
-      k.frontmatter.tags.some((e: string) => activeTag().includes(e)),
-    );
-    props.setPosts(sortedPosts);
-  });
   return (
     <div class={s.sortTags}>
       {Object.keys(getTags(props.allPosts)).map(function (key) {
         return (
           <div class={s.tag} onClick={() => handleClick(key)}>
             <span
-              class={`${s.tagName} ${activeTag().includes(key) && s.activeTag}`}
+              class={`${s.tagName} ${
+                props.activeTag.includes(key) && s.activeTag
+              }`}
             >
               {key}
             </span>
