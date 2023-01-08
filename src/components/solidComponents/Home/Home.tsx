@@ -1,6 +1,7 @@
 import type { MarkdownInstance } from "astro";
-import { Component, createSignal } from "solid-js";
+import { Component, createEffect, createSignal, on, onMount } from "solid-js";
 import { formatDate } from "../../../utils/formatDate";
+import Pagination from "./subcomponents/Pagination/Pagination";
 import Post from "./subcomponents/Post";
 import Search from "./subcomponents/Search/Search";
 import SortTags from "./subcomponents/SortTags/SortTags";
@@ -9,8 +10,32 @@ interface Props {
   allPosts: MarkdownInstance<Record<string, any>>[];
 }
 
-const Home: Component<Props> = ({ allPosts }) => {
-  const [posts, setPosts] = createSignal<typeof allPosts>(allPosts);
+const PAGE_NUMBER = 0;
+export const PAGE_SIZE = 2;
+
+const Home: Component<Props> = (props) => {
+  const [posts, setPosts] = createSignal<typeof props.allPosts>([]);
+  const [page, setPage] = createSignal<number>(PAGE_NUMBER);
+  const total = props.allPosts.length;
+  createEffect(
+    on(
+      page,
+      (v) => {
+        console.log(v * PAGE_SIZE, PAGE_SIZE * (v + 1));
+
+        const paginatedArray = props.allPosts.slice(
+          v * PAGE_SIZE,
+          PAGE_SIZE * (v + 1),
+        );
+        setPosts(paginatedArray);
+      },
+      { defer: true },
+    ),
+  );
+
+  const paginatedArray = props.allPosts.slice(page(), PAGE_SIZE * (page() + 1));
+  setPosts(paginatedArray);
+
   return (
     <main>
       <Search />
@@ -30,6 +55,7 @@ const Home: Component<Props> = ({ allPosts }) => {
           );
         })}
       </article>
+      <Pagination pageNumber={page() + 1} total={total} setPage={setPage} />
     </main>
   );
 };
