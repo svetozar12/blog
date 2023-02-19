@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+}
+
+.container > * {
+  margin: 1rem;
+  background-color: var(--blog-blue);
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container > *:hover {
+  background-color: var(--blog-blue-100);
+}
+
+.activePage {
+  background-color: var(--blog-blue-100);
+}
